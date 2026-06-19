@@ -18,7 +18,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="bg-[#14171A] text-white/70 border border-white/10 px-3 py-3 rounded-md w-full sm:flex-1 sm:max-w-xs placeholder:text-sm placeholder:font-light focus:outline-none focus:ring-1 focus:ring-gray-600"
               />
-              <button className="bg-[#14171A] text-white px-5 py-3 rounded-md border border-white/10 text-sm hover:bg-gray-800 transition-colors">
+              <button className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md">
                 Subscribe
               </button>
             </div>
@@ -30,22 +30,22 @@ const Footer = () => {
               <h3 className="font-medium text-sm mb-4 md:mb-6">Products</h3>
               <ul className="space-y-3 md:space-y-4 text-sm text-white/70 w-40">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Resume Builder
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     AI Suggestions
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Resume Templates
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Cover Letter Generator
                   </a>
                 </li>
@@ -55,29 +55,29 @@ const Footer = () => {
             {/* Resources */}
             <div>
               <h3 className="font-medium text-sm mb-4 md:mb-6">Resources</h3>
-              <ul className="space-y-3 md:space-y-4 text-sm text-white/70">
+              <ul className="space-y-3 md:space-y-4 text-sm text-white/70 ">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Career Trips
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Resume Examples
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Help Center
                   </a>
                 </li>
@@ -89,17 +89,17 @@ const Footer = () => {
               <h3 className="font-medium text-sm mb-4 md:mb-6">Company</h3>
               <ul className="space-y-3 md:space-y-4 text-sm text-white/70">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Vision
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Careers
                   </a>
                   <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-green-950 border border-green-300 text-green-300">
@@ -107,12 +107,12 @@ const Footer = () => {
                   </span>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Privacy policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-purple-400">
                     Contact Us
                   </a>
                 </li>
@@ -127,7 +127,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-5 md:gap-6 order-1 md:order-2">
             {/* X (Twitter) */}
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-purple-600">
               <svg
                 width="20"
                 height="20"
@@ -139,7 +139,7 @@ const Footer = () => {
               </svg>
             </a>
             {/* Github */}
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-purple-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -156,7 +156,7 @@ const Footer = () => {
               </svg>
             </a>
             {/* Linkedin */}
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-purple-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -174,7 +174,7 @@ const Footer = () => {
               </svg>
             </a>
             {/* Youtube */}
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-purple-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -191,7 +191,7 @@ const Footer = () => {
               </svg>
             </a>
             {/* Instagram */}
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="text-white hover:text-purple-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
