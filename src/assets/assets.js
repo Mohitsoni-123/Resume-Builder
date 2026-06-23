@@ -1,7 +1,8 @@
 export const dummyResumeData = [
   {
     _id: "1",
-    
+    resumeId: "RES001",
+    resumeTemplate: "modern", // modern | classic | minimal | professional
     updatedAt: "2026-06-20",
 
     personalInfo: {
@@ -19,6 +20,7 @@ export const dummyResumeData = [
 
     education: [
       {
+        id: "edu1",
         degree: "B.Tech in Computer Science",
         institution: "ABC University",
         startDate: "2021",
@@ -29,6 +31,7 @@ export const dummyResumeData = [
 
     experience: [
       {
+        id: "exp1",
         company: "XYZ Pvt Ltd",
         position: "Frontend Developer Intern",
         startDate: "Jan 2025",
@@ -40,6 +43,7 @@ export const dummyResumeData = [
 
     projects: [
       {
+        id: "proj1",
         title: "Resume Builder",
         description:
           "Built an AI-powered resume builder using React, Tailwind CSS, and Node.js.",
@@ -47,6 +51,7 @@ export const dummyResumeData = [
         github: "https://github.com/johndoe/resume-builder",
       },
       {
+        id: "proj2",
         title: "Nestify",
         description:
           "A property rental platform with modern UI and authentication.",
@@ -56,22 +61,31 @@ export const dummyResumeData = [
     ],
 
     skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Tailwind CSS",
-      "Node.js",
-      "MongoDB",
-      "Git",
-      "GitHub",
+      { id: "skill1", name: "HTML" },
+      { id: "skill2", name: "CSS" },
+      { id: "skill3", name: "JavaScript" },
+      { id: "skill4", name: "React" },
+      { id: "skill5", name: "Tailwind CSS" },
+      { id: "skill6", name: "Node.js" },
+      { id: "skill7", name: "MongoDB" },
+      { id: "skill8", name: "Git" },
+      { id: "skill9", name: "GitHub" },
     ],
 
     certifications: [
-      "Frontend Development Certification",
-      "JavaScript Essentials",
+      {
+        id: "cert1",
+        name: "Frontend Development Certification",
+      },
+      {
+        id: "cert2",
+        name: "JavaScript Essentials",
+      },
     ],
 
-    languages: ["English", "Hindi"],
+    languages: [
+      { id: "lang1", name: "English" },
+      { id: "lang2", name: "Hindi" },
+    ],
   },
 ];
