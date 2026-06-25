@@ -7,6 +7,7 @@ import { RiGraduationCapLine } from "react-icons/ri";
 import { FaRegFolderOpen } from "react-icons/fa";
 import { IoSparklesOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import PersonalInfoForm from "../components/PersonalInfoForm";
 
 const ResumeBuilder = () => {
   const { resumeId } = useParams();
@@ -106,8 +107,15 @@ const ResumeBuilder = () => {
                 </div>
               </div>
 
-
-              <div></div>
+              {/* Form Content */}
+              <div className="space-y-6">
+                
+                {
+                  activeSection.id=='personal' && (
+                    <PersonalInfoForm data={resumeData.personalInfo} onChange={(data)=>setResumeData(prev=>({...prev, personalInfo:data}))} />
+                  )
+                }
+              </div>
             </div>
           </div>
 

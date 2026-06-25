@@ -1,8 +1,8 @@
 import React from "react";
 
 const Login = () => {
-  const query = new URLSearchParams(window.location.search) 
-  const urlState = query.get('state')
+  const query = new URLSearchParams(window.location.search);
+  const urlState = query.get("state");
   const [state, setState] = React.useState(urlState || "login");
 
   const [formData, setFormData] = React.useState({
@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
   };
   return (
-    < div className="bg-gradient-to-br from-black via-indigo-950 to-purple-950 min-h-screen flex  items-center justify-center">
+    <div className="bg-gradient-to-br from-black via-indigo-950 to-purple-950 min-h-screen flex  items-center justify-center">
       <form
         onSubmit={handleSubmit}
         className="w-full  sm:w-87.5 text-center bg-white/6 border border-white/10 rounded-2xl px-8"
@@ -32,7 +32,7 @@ const Login = () => {
         <p className="text-gray-400 text-sm mt-2">Please {state} to continue</p>
 
         {state !== "login" && (
-          <div className="flex items-center mt-6 w-full bg-white/5 ring-2 ring-white/10 focus-within:ring-indigo-500/60 h-12 rounded-full overflow-hidden pl-6 gap-2 transition-all ">
+          <div className="flex items-center mt-6 w-full bg-white/5 ring-2 ring-white/10 focus-within:ring-indigo-500/60 h-12 rounded-full overflow-hidden pl-6 gap-2 transition-al">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -53,7 +53,8 @@ const Login = () => {
               type="text"
               name="name"
               placeholder="Name"
-              className="w-full bg-transparent text-white placeholder-white/60 border-none outline-none "
+              autoComplete="off"
+              className="w-full bg-transparent text-white border-0 outline-none focus:outline-none focus:ring-0"
               value={formData.name}
               onChange={handleChange}
               required
@@ -79,10 +80,19 @@ const Login = () => {
             <rect x="2" y="4" width="20" height="16" rx="2" />{" "}
           </svg>
           <input
+            // type="email"
+            // name="email"
+            // placeholder="Email id"
+            // className="w-full bg-transparent text-white border-0 outline-none focus:outline-none focus:ring-0 bg-transparent"
+            // value={formData.email}
+            // onChange={handleChange}
+            // required
+
             type="email"
             name="email"
             placeholder="Email id"
-            className="w-full bg-transparent text-white placeholder-white/60 border-none outline-none "
+            autoComplete="off"
+            className="w-full bg-transparent text-white border-none outline-none focus:outline-none focus:ring-0"
             value={formData.email}
             onChange={handleChange}
             required
@@ -110,7 +120,7 @@ const Login = () => {
             type="password"
             name="password"
             placeholder="Password"
-            className="w-full bg-transparent text-white placeholder-white/60 border-none outline-none"
+            className="w-full bg-transparent text-white border-0 outline-none focus:outline-none focus:ring-0 "
             value={formData.password}
             onChange={handleChange}
             required
