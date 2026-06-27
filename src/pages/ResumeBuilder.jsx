@@ -4,10 +4,11 @@ import { dummyResumeData } from "../assets/assets";
 import { FaArrowLeft, FaCircleUser } from "react-icons/fa6";
 import { AiOutlineFileText } from "react-icons/ai";
 import { RiGraduationCapLine } from "react-icons/ri";
-import { FaRegFolderOpen } from "react-icons/fa";
+import { FaProjectDiagram, FaRegFolderOpen } from "react-icons/fa";
 import { IoSparklesOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import PersonalInfoForm from "../components/PersonalInfoForm";
+import ResumePreview from "../components/ResumePreview";
 
 const ResumeBuilder = () => {
   const { resumeId } = useParams();
@@ -43,6 +44,7 @@ const ResumeBuilder = () => {
     { id: "education", name: "Education", icon: RiGraduationCapLine },
     { id: "project", name: "Project", icon: FaRegFolderOpen },
     { id: "skills", name: "Skills", icon: IoSparklesOutline },
+
   ];
 
   const activeSection = section[activeSectionIndex];
@@ -120,7 +122,14 @@ const ResumeBuilder = () => {
           </div>
 
           {/* Right Panel - Preview */}
-          <div>jknjkre</div>
+          <div className="lg:col-span-7 max-lg:mt-6">
+              <div>
+                {/* buttons */}
+              </div>
+
+              {/* Resume preview */}
+              <ResumePreview data={resumeData} template={resumeData.template}/>
+          </div>
         </div>
       </div>
     </div>

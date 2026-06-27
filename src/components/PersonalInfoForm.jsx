@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBriefcase, FaGlobe, FaLinkedin, FaMailchimp, FaMap, FaPhone, FaUser } from 'react-icons/fa6'
+import { FaBriefcase, FaFolder, FaGlobe, FaLinkedin, FaMailchimp, FaMap, FaPhone, FaUser } from 'react-icons/fa6'
 
 function PersonalInfoForm({data, onChange}) {
     const handleChange = (field, value)=>{

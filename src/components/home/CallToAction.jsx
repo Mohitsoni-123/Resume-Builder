@@ -16,12 +16,13 @@ const CallToAction = () => {
                     Commnunity & Support
                 </p>
                 <h1 className="text-4xl md:text-5xl md:leading-[60px] font-medium max-w-2xl mt-5">
-                    Create Amazing AI Project Fast
-                    <span className="bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent">er Than Before</span>
+                    
+                    Craft Your Perfect Re
+                    <span className="bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent">sume with AI</span>
                 </h1>
-                <p className="text-white text-sm mt-3">Elplore powerful tools and resources to bring your ideas to life.</p>
+                <p className="text-white text-sm mt-3">Let AI write, optimize, and format your resume so you can focus on landing interviews.</p>
                 <button className="px-12 py-2.5 mt-6 rounded-full text-sm border border-[#54487B] active:scale-95 transition-all bg-gradient-to-r from-[#A992F2] to-[#DFAB9B] bg-clip-text text-transparent cursor-pointer">
-                    Get Started
+                    Build My Resume
                 </button>
             </div>
         </div>
