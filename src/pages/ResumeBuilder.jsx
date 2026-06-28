@@ -24,14 +24,14 @@ const ResumeBuilder = () => {
     languages: [],
     certifications: [],
     public: false,
-    template: "classic",
+    resumeTemplate: "classic",
   });
 
-  const loadExistingResume = async () => {
+  const loadExistingResume = () => {
     const resume = dummyResumeData.find((resume) => resume._id === resumeId);
     if (resume) {
       setResumeData(resume);
-      document.title = resume.title;
+      document.title = resume.personalInfo.fullName + " Resume";
     }
   };
 
@@ -42,16 +42,24 @@ const ResumeBuilder = () => {
     { id: "summary", name: "Summary", icon: AiOutlineFileText },
     { id: "experience", name: "Experience", icon: IoBriefcaseOutline },
     { id: "education", name: "Education", icon: RiGraduationCapLine },
-    { id: "project", name: "Project", icon: FaRegFolderOpen },
+    { id: "projects", name: "Projects", icon: FaRegFolderOpen },
     { id: "skills", name: "Skills", icon: IoSparklesOutline },
 
   ];
 
   const activeSection = section[activeSectionIndex];
+console.log(resumeData);
+console.log(resumeId);
+console.log(dummyResumeData);
+console.log("URL resumeId =", resumeId);
+const resume = dummyResumeData.find(
+    (resume) => resume.id === resumeId
+);
 
+console.log(resume);
   useEffect(() => {
     loadExistingResume();
-  }, []);
+  }, [resumeId]);
   return (
     <div>
       <div className="max-w-7xl mx-auto px-4 py-4">
@@ -101,7 +109,7 @@ const ResumeBuilder = () => {
                       )
                     }
                     className={`flex items-center gap-1 p-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all ${activeSectionIndex===section.length -1  && 'opacity-50'}`}
-                    disabled={activeSectionIndex === section.length -1  && 'opacity-50'}
+                    disabled={activeSectionIndex === section.length - 1}
                   >
                     Next
                     <FiChevronRight className="size-4" />
@@ -113,7 +121,7 @@ const ResumeBuilder = () => {
               <div className="space-y-6">
                 
                 {
-                  activeSection.id=='personal' && (
+                  activeSection.id==='personal' && (
                     <PersonalInfoForm data={resumeData.personalInfo} onChange={(data)=>setResumeData(prev=>({...prev, personalInfo:data}))} />
                   )
                 }
@@ -128,7 +136,10 @@ const ResumeBuilder = () => {
               </div>
 
               {/* Resume preview */}
-              <ResumePreview data={resumeData} template={resumeData.template}/>
+              <ResumePreview data={resumeData}
+              template="classic"/>
+              {/* <ResumePreview data={resumeData}
+              template={resumeData.resumeTemplate}/> */}
           </div>
         </div>
       </div>

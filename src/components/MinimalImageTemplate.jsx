@@ -1,14 +1,26 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const MinimalImageTemplate = ({ data, accentColor }) => {
+    // const formatDate = (dateStr) => {
+    //     if (!dateStr) return "";
+    //     const [year, month] = dateStr.split("-");
+    //     return new Date(year, month - 1).toLocaleDateString("en-US", {
+    //         year: "numeric",
+    //         month: "short",
+    //     });
+    // };
+
     const formatDate = (dateStr) => {
-        if (!dateStr) return "";
+    if (!dateStr) return "";
+    if (dateStr.includes("-")) {
         const [year, month] = dateStr.split("-");
-        return new Date(year, month - 1).toLocaleDateString("en-US", {
+        return new Date(year, parseInt(month, 10) - 1).toLocaleDateString("en-US", {
             year: "numeric",
             month: "short",
         });
-    };
+    }
+    return dateStr;
+};
 
     return (
         <div className="max-w-5xl mx-auto bg-white text-zinc-800">
@@ -35,7 +47,7 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
                         {data.personalInfo?.fullName || "Your Name"}
                     </h1>
                     <p className="uppercase text-zinc-600 font-medium text-sm tracking-widest">
-                        {data?.personalInfo?.profession || "Profession"}
+                        {data.personalInfo?.jobTitle  || "Profession"}
                     </p>
                 </div>
 
@@ -90,6 +102,24 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
                                     <div key={index}>
                                         <p className="font-semibold uppercase">{edu.degree}</p>
                                         <p className="text-zinc-600">{edu.institution}</p>
+
+
+
+
+
+
+                                        {
+                                            edu.cgpa && (
+                                                <p className="text-zinc-500 text-xs">GPA: {edu.cgpa}</p>
+                                            )
+                                        }
+
+
+
+
+
+
+
                                         <p className="text-xs text-zinc-500">
                                             {formatDate(edu.endDate)}
                                         </p>
@@ -116,7 +146,7 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
                             </h2>
                             <ul className="space-y-1 text-sm">
                                 {data.skills.map((skill, index) => (
-                                    <li key={index}>{skill}</li>
+                                    <li key={index}>{skill.name}</li>
                                 ))}
                             </ul>
                         </section>
@@ -160,13 +190,22 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
                                         <p className="text-sm mb-2" style={{ color: accentColor }} >
                                             {exp.company}
                                         </p>
-                                        {exp.description && (
+                                        {/* {exp.description && (
                                             <ul className="list-disc list-inside text-sm text-zinc-700 leading-relaxed space-y-1">
                                                 {exp.description.split("\n").map((line, i) => (
                                                     <li key={i}>{line}</li>
                                                 ))}
                                             </ul>
+                                        )} */}
+                                        
+                                        {exp.description && (
+                                            <ul className="list-disc list-inside text-sm text-zinc-700 leading-relaxed space-y-1">
+                                                {(exp.description || "").split("\n").map((line, i) => (
+                                                    <li key={i}>{line}</li>
+                                                ))}
+                                            </ul>
                                         )}
+
                                     </div>
                                 ))}
                             </div>
@@ -188,7 +227,7 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
                                         </p> */}
                                         {project.description && (
                                             <ul className="list-disc list-inside text-sm text-zinc-700  space-y-1">
-                                                {project.description.split("\n").map((line, i) => (
+                                                {(project.description || "").split("\n").map((line, i) => (
                                                     <li key={i}>{line}</li>
                                                 ))}
                                             </ul>
