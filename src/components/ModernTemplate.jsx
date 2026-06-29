@@ -169,6 +169,11 @@ const ModernTemplate = ({ data, accentColor }) => {
                       <h3 className="text-lg font-medium text-gray-900">
                         {p.title}
                       </h3>
+                      
+                    </div>
+                    <div className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded">
+                      {formatDate(p.startDate)} -{" "}
+					          {p.endDate ? formatDate(p.endDate) : "Present"}
                     </div>
                   </div>
                   {p.description && (

@@ -1,4 +1,6 @@
+import { GitBranchIcon } from 'lucide-react'
 import React from 'react'
+import { FaGithub } from 'react-icons/fa'
 import { FaBriefcase, FaFolder, FaGlobe, FaLinkedin, FaMailchimp, FaMap, FaPhone, FaUser } from 'react-icons/fa6'
 
 function PersonalInfoForm({data, onChange}) {
@@ -13,7 +15,7 @@ function PersonalInfoForm({data, onChange}) {
         {key: "location", label: "Location", icon: FaMap, type: "text"},
         {key: "profession", label: "Profession", icon: FaBriefcase, type: "text"},
         {key: "linkedin", label: "LinkedIn Profile", icon: FaLinkedin, type: "url"},
-        {key: "website", label: "Personal Website", icon: FaGlobe, type: "url"},
+        {key: "github", label: "Github Profile", icon: FaGithub, type: "url"},
     ]
   return (
     <div className='px-4 py-4'>
