@@ -9,6 +9,7 @@ import { IoSparklesOutline, IoBriefcaseOutline } from "react-icons/io5";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import PersonalInfoForm from "../components/PersonalInfoForm";
 import ResumePreview from "../components/ResumePreview";
+import TemplateSelector from "../components/TemplateSelector";
 
 const ResumeBuilder = () => {
   const { resumeId } = useParams();
@@ -48,10 +49,10 @@ const ResumeBuilder = () => {
   ];
 
   const activeSection = section[activeSectionIndex];
-console.log(resumeData);
-console.log(resumeId);
-console.log(dummyResumeData);
-console.log("URL resumeId =", resumeId);
+// console.log(resumeData);
+// console.log(resumeId);
+// console.log(dummyResumeData);
+// console.log("URL resumeId =", resumeId);
 const resume = dummyResumeData.find(
     (resume) => resume.id === resumeId
 );
@@ -71,11 +72,11 @@ console.log(resume);
         </Link>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 pb-8">
+      <div className="max-w-7xl mx-auto px-4 pb-8 ">
         <div className="grid lg:grid-cols-12 gap-8">
           {/* Left Panel - Form */}
           <div className="relative lg:col-span-5 rounded-lg overflow-hidden">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 px-2">
               <hr className="absolute top-0 left-0 right-0 border-2 border-gray-300" />
 
               <hr
@@ -86,7 +87,9 @@ console.log(resume);
               />
               {/* Section Navigation */}
               <div className="flex justify-between items-center mb-6 border-b border-gray-300 py-1">
-                <div></div>
+                <div className="flex justify-between items-center mb-6 border-b norder-gray-300 py-1">
+                  <TemplateSelector selectedTemplate={resumeData.resumeTemplate} onChange={(template)=>setResumeData(prev=>({...prev, resumeTemplate: template}))}/>
+                </div>
                 <div className="flex items-center">
                   {activeSectionIndex != 0 && (
                     <button
@@ -137,7 +140,7 @@ console.log(resume);
 
               {/* Resume preview */}
               <ResumePreview data={resumeData}
-              template="classic"/>
+              template={resumeData.resumeTemplate}/>
               {/* <ResumePreview data={resumeData}
               template={resumeData.resumeTemplate}/> */}
           </div>

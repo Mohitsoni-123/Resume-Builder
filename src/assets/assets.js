@@ -2,7 +2,7 @@ export const dummyResumeData = [
   {
     _id: "1",
     resumeId: "RES001",
-    resumeTemplate: "modern", // modern | classic | minimal | professional
+    resumeTemplate: "classic", // modern | classic | minimal | professional
     updatedAt: "2026-06-20",
 
     personalInfo: {
