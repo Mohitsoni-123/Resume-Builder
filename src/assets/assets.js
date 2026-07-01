@@ -87,6 +87,15 @@ export const dummyResumeData = [
       },
     ],
 
+    achievements: [
+      {
+        title: "Solved 300+ DSA Problems",
+      },
+      {
+        title: "5⭐ in C++ on HackerRank",
+      },
+    ],
+
     languages: [
       { id: "lang1", name: "English" },
       { id: "lang2", name: "Hindi" },
